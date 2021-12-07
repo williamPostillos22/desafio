@@ -33,8 +33,21 @@
     border: 2px solid rgb(255, 0, 0);
     box-sizing: border-box;
   }
+  @keyframes zoom {
+	from{
+		transform: scale(1,1);
+	}
+	to{
+		transform: scale(1.1,1.1);
+	}
+}
+.banner{
+	height: auto;
+	overflow: hidden;
+}
   .banner img{
 	width: 100%;
+    height: 30rem;
 	display: block;
 	animation-name: zoom;
 	animation-timing-function: linear;
@@ -42,6 +55,17 @@
 	animation-duration: 7s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+}
+.contenidoPrincipal .box{
+    width: 25%;
+}
+.contenidoPrincipal:hover img{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+}
+.contenidoPrincipal img{
+	width: 100%;
+	transition: all 250ms ease-in-out;
 }
   .contenidoPrincipal {
     margin: 5rem 0;
